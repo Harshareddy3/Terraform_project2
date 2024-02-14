@@ -8,7 +8,7 @@ resource "aws_instance" "one" {
 ami = "ami-0e731c8a588258d0d"
 instance_type = "t2.medium"
    key_name = "Terraform"
-   vpc_security_group_ids = [aws_security_group.three.id]
+   vpc_security_group_ids = [aws_security_group.sg.id]
    availability_zone = "us-east-1a"
    user_data = <<EOF
 #!/bin/bash
